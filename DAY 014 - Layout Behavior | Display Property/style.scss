@@ -30,6 +30,7 @@ html, body
         {
             width: 100%;
             height: 2.5rem;
+            // background-color: #1d1d1f;
             background-color: #000;
             display: flex;
             justify-content: center;
@@ -39,6 +40,10 @@ html, body
             font-family: navbar;
             font-size: 0.7rem;
             font-weight: 100;
+            h3 
+            {
+                cursor: pointer;
+            }
 
             i 
             {
@@ -105,6 +110,143 @@ html, body
                 {
                     background-color: #0077ed;
                     cursor: pointer;
+                }
+
+            }
+            
+
+        }
+
+        #section1
+        {
+            width: 100%;
+            aspect-ratio: 18 / 6;
+            background-image: url(./assets/hero_iphone_air__0gxyavihpiqu_large.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 6rem;
+
+            h1 
+            {
+                font-family: light;
+                font-size: 4rem;
+            }
+
+            p 
+            {
+                font-size: 1.5rem;
+                font-weight: 900;
+                font-family: light;
+                text-align: center;
+            }
+
+            .btns
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .btn1
+                {
+                    padding: 0.8rem 1.3rem;
+                    font-size: 1rem;
+                    background-color: #0077ed;
+                    color: white;
+                    border: none;
+                    border-radius: 5rem;
+                    cursor: pointer;
+                }
+                
+                .btn2
+                {
+                    padding: 0.8rem 1.2rem;
+                    font-size: 1rem;
+                    color: #0077ed;
+                    border: 1px solid #0077ed;
+                    border-radius: 5rem;
+                }
+                
+                .btn2:hover
+                {
+                    background-color: #0077ed;
+                    cursor: pointer;
+                    color: white;
+                    
+                }
+
+            }
+            
+
+        }
+
+        #section2
+        {
+            width: 100%;
+            aspect-ratio: 18 / 6;
+            background-image: url(./assets/hero_macbook_pro_m5__fjgmapbkxo2u_mediumtall.jpg);
+            background-size: cover;
+            background-position: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 6rem;
+
+            h1 
+            {
+                font-family: light;
+                font-size: 4rem;
+                color: #fff;
+            }
+
+            p 
+            {
+                font-size: 1.5rem;
+                font-weight: 900;
+                font-family: light;
+                text-align: center;
+                color: #fff;
+            }
+
+            .btns
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .btn1
+                {
+                    padding: 0.8rem 1.3rem;
+                    font-size: 1rem;
+                    background-color: #0077ed;
+                    color: white;
+                    border: none;
+                    border-radius: 5rem;
+                    cursor: pointer;
+                }
+                
+                .btn2
+                {
+                    padding: 0.8rem 1.2rem;
+                    font-size: 1rem;
+                    color: #fff;
+                    border: 1px solid #0077ed;
+                    border-radius: 5rem;
+                    background-color: #000;
+                }
+                
+                .btn2:hover
+                {
+                    background-color: #0077ed;
+                    cursor: pointer;
+                    color: white;
+                    
                 }
 
             }

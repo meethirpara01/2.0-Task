@@ -34,6 +34,9 @@ html main #navbar, body main #navbar {
   font-size: 0.7rem;
   font-weight: 100;
 }
+html main #navbar h3, body main #navbar h3 {
+  cursor: pointer;
+}
 html main #navbar i, body main #navbar i {
   font-size: 1rem;
 }
@@ -85,4 +88,105 @@ html main #herosection .btns .btn2, body main #herosection .btns .btn2 {
 html main #herosection .btns .btn2:hover, body main #herosection .btns .btn2:hover {
   background-color: #0077ed;
   cursor: pointer;
+}
+html main #section1, body main #section1 {
+  width: 100%;
+  aspect-ratio: 18/6;
+  background-image: url(./assets/hero_iphone_air__0gxyavihpiqu_large.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 6rem;
+}
+html main #section1 h1, body main #section1 h1 {
+  font-family: light;
+  font-size: 4rem;
+}
+html main #section1 p, body main #section1 p {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: light;
+  text-align: center;
+}
+html main #section1 .btns, body main #section1 .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #section1 .btns .btn1, body main #section1 .btns .btn1 {
+  padding: 0.8rem 1.3rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #section1 .btns .btn2, body main #section1 .btns .btn2 {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+}
+html main #section1 .btns .btn2:hover, body main #section1 .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #section2, body main #section2 {
+  width: 100%;
+  aspect-ratio: 18/6;
+  background-image: url(./assets/hero_macbook_pro_m5__fjgmapbkxo2u_mediumtall.jpg);
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 6rem;
+}
+html main #section2 h1, body main #section2 h1 {
+  font-family: light;
+  font-size: 4rem;
+  color: #fff;
+}
+html main #section2 p, body main #section2 p {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: light;
+  text-align: center;
+  color: #fff;
+}
+html main #section2 .btns, body main #section2 .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #section2 .btns .btn1, body main #section2 .btns .btn1 {
+  padding: 0.8rem 1.3rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #section2 .btns .btn2, body main #section2 .btns .btn2 {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  color: #fff;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #000;
+}
+html main #section2 .btns .btn2:hover, body main #section2 .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
