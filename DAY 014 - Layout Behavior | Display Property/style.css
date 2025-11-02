@@ -23,6 +23,8 @@ html main, body main {
 }
 html main #navbar, body main #navbar {
   width: 100%;
+  position: fixed;
+  top: 0;
   height: 2.5rem;
   background-color: #000;
   display: flex;
@@ -140,19 +142,21 @@ html main #section1 .btns .btn2:hover, body main #section1 .btns .btn2:hover {
 }
 html main #section2, body main #section2 {
   width: 100%;
-  aspect-ratio: 18/6;
+  aspect-ratio: 16/6;
   background-image: url(./assets/hero_macbook_pro_m5__fjgmapbkxo2u_mediumtall.jpg);
-  background-size: cover;
-  background-position: left;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   padding-top: 6rem;
 }
 html main #section2 h1, body main #section2 h1 {
-  font-family: light;
-  font-size: 4rem;
+  font-family: bold;
+  font-size: 3rem;
   color: #fff;
 }
 html main #section2 p, body main #section2 p {
@@ -186,6 +190,347 @@ html main #section2 .btns .btn2, body main #section2 .btns .btn2 {
   background-color: #000;
 }
 html main #section2 .btns .btn2:hover, body main #section2 .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection, body main #BoxesSection {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "A B" "C D" "E F";
+  gap: 1rem;
+}
+html main #BoxesSection .watchs, body main #BoxesSection .watchs {
+  height: 33rem;
+  grid-area: A;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 5rem 0rem;
+  background-image: url(./assets/promo_apple_watch_series_11__b63hxviqvonm_large.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .watchs .h1heading, body main #BoxesSection .watchs .h1heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+html main #BoxesSection .watchs .h1heading i, body main #BoxesSection .watchs .h1heading i {
+  font-size: 1.8rem;
+}
+html main #BoxesSection .watchs .h1heading h1, body main #BoxesSection .watchs .h1heading h1 {
+  font-family: bold;
+}
+html main #BoxesSection .watchs p, body main #BoxesSection .watchs p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+html main #BoxesSection .watchs .btns, body main #BoxesSection .watchs .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .watchs .btns .btn1, body main #BoxesSection .watchs .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .watchs .btns .btn2, body main #BoxesSection .watchs .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #fff;
+}
+html main #BoxesSection .watchs .btns .btn2:hover, body main #BoxesSection .watchs .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection .ipadPro, body main #BoxesSection .ipadPro {
+  height: 33rem;
+  grid-area: B;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem 0rem;
+  background-image: url(./assets/promo_ipad_pro__c529dk533k4m_large.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .ipadPro h1, body main #BoxesSection .ipadPro h1 {
+  font-family: light;
+  color: #fff;
+  font-weight: 900;
+}
+html main #BoxesSection .ipadPro p, body main #BoxesSection .ipadPro p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+}
+html main #BoxesSection .ipadPro .btns, body main #BoxesSection .ipadPro .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .ipadPro .btns .btn1, body main #BoxesSection .ipadPro .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .ipadPro .btns .btn2, body main #BoxesSection .ipadPro .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #000;
+}
+html main #BoxesSection .ipadPro .btns .btn2:hover, body main #BoxesSection .ipadPro .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection .AirpodPro3, body main #BoxesSection .AirpodPro3 {
+  height: 33rem;
+  grid-area: C;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem 0rem;
+  background-image: url(./assets/promo_airpodspro_3__f6xmza7bglei_small.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .AirpodPro3 h1, body main #BoxesSection .AirpodPro3 h1 {
+  font-family: light;
+  font-weight: 900;
+}
+html main #BoxesSection .AirpodPro3 p, body main #BoxesSection .AirpodPro3 p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+}
+html main #BoxesSection .AirpodPro3 .btns, body main #BoxesSection .AirpodPro3 .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .AirpodPro3 .btns .btn1, body main #BoxesSection .AirpodPro3 .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .AirpodPro3 .btns .btn2, body main #BoxesSection .AirpodPro3 .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #fff;
+}
+html main #BoxesSection .AirpodPro3 .btns .btn2:hover, body main #BoxesSection .AirpodPro3 .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection .Watchse3, body main #BoxesSection .Watchse3 {
+  height: 33rem;
+  grid-area: D;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3.5rem 0rem;
+  background-image: url(./assets/promo_apple_watch_se_3__fz5y29qx5mmy_large.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .Watchse3 .h1heading, body main #BoxesSection .Watchse3 .h1heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+html main #BoxesSection .Watchse3 .h1heading i, body main #BoxesSection .Watchse3 .h1heading i {
+  font-size: 1.8rem;
+}
+html main #BoxesSection .Watchse3 .h1heading h1, body main #BoxesSection .Watchse3 .h1heading h1 {
+  font-family: bold;
+}
+html main #BoxesSection .Watchse3 p, body main #BoxesSection .Watchse3 p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+html main #BoxesSection .Watchse3 .btns, body main #BoxesSection .Watchse3 .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .Watchse3 .btns .btn1, body main #BoxesSection .Watchse3 .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .Watchse3 .btns .btn2, body main #BoxesSection .Watchse3 .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #fff;
+}
+html main #BoxesSection .Watchse3 .btns .btn2:hover, body main #BoxesSection .Watchse3 .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection .MackbookAir, body main #BoxesSection .MackbookAir {
+  height: 33rem;
+  grid-area: E;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem 0rem;
+  background-image: url(./assets/promo_macbook_air__fqowrtnxewqe_large.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .MackbookAir h1, body main #BoxesSection .MackbookAir h1 {
+  font-family: light;
+  font-weight: 900;
+}
+html main #BoxesSection .MackbookAir p, body main #BoxesSection .MackbookAir p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+}
+html main #BoxesSection .MackbookAir .btns, body main #BoxesSection .MackbookAir .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .MackbookAir .btns .btn1, body main #BoxesSection .MackbookAir .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .MackbookAir .btns .btn2, body main #BoxesSection .MackbookAir .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #fff;
+}
+html main #BoxesSection .MackbookAir .btns .btn2:hover, body main #BoxesSection .MackbookAir .btns .btn2:hover {
+  background-color: #0077ed;
+  cursor: pointer;
+  color: white;
+}
+html main #BoxesSection .TradeIn, body main #BoxesSection .TradeIn {
+  height: 33rem;
+  grid-area: F;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3.5rem 0rem;
+  background-image: url(./assets/promo_iphone_tradein__bugw15ka691e_large.jpg);
+  background-size: cover;
+  background-position: center;
+}
+html main #BoxesSection .TradeIn .h1heading, body main #BoxesSection .TradeIn .h1heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+html main #BoxesSection .TradeIn .h1heading i, body main #BoxesSection .TradeIn .h1heading i {
+  font-size: 2rem;
+}
+html main #BoxesSection .TradeIn .h1heading h1, body main #BoxesSection .TradeIn .h1heading h1 {
+  font-family: bold;
+  font-size: 2.5rem;
+}
+html main #BoxesSection .TradeIn p, body main #BoxesSection .TradeIn p {
+  font-family: light;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+}
+html main #BoxesSection .TradeIn .btns, body main #BoxesSection .TradeIn .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+html main #BoxesSection .TradeIn .btns .btn1, body main #BoxesSection .TradeIn .btns .btn1 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077ed;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+html main #BoxesSection .TradeIn .btns .btn2, body main #BoxesSection .TradeIn .btns .btn2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0077ed;
+  border: 1px solid #0077ed;
+  border-radius: 5rem;
+  background-color: #fff;
+}
+html main #BoxesSection .TradeIn .btns .btn2:hover, body main #BoxesSection .TradeIn .btns .btn2:hover {
   background-color: #0077ed;
   cursor: pointer;
   color: white;

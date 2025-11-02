@@ -29,6 +29,8 @@ html, body
         #navbar
         {
             width: 100%;
+            position: fixed;
+            top: 0;
             height: 2.5rem;
             // background-color: #1d1d1f;
             background-color: #000;
@@ -187,20 +189,22 @@ html, body
         #section2
         {
             width: 100%;
-            aspect-ratio: 18 / 6;
+            aspect-ratio: 16 / 6;
             background-image: url(./assets/hero_macbook_pro_m5__fjgmapbkxo2u_mediumtall.jpg);
-            background-size: cover;
-            background-position: left;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 1rem;
             padding-top: 6rem;
 
             h1 
             {
-                font-family: light;
-                font-size: 4rem;
+                font-family: bold;
+                font-size: 3rem;
                 color: #fff;
             }
 
@@ -248,11 +252,454 @@ html, body
                     color: white;
                     
                 }
-
             }
-            
-
         }
 
+        #BoxesSection 
+        {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "A B"
+                "C D"
+                "E F";
+            gap: 1rem;
+
+            .watchs    
+            { 
+                height: 33rem;
+                grid-area: A; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 5rem 0rem;
+                background-image: url(./assets/promo_apple_watch_series_11__b63hxviqvonm_large.jpg);
+                background-size: cover;
+                background-position: center;
+                
+
+                .h1heading
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    i 
+                    {
+                        font-size: 1.8rem;
+                    }
+                    
+                    h1 
+                    {
+                        font-family: bold;
+                    }
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #fff;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+                
+            }
+            .ipadPro   
+            { 
+                height: 33rem;
+                grid-area: B; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 4rem 0rem;
+                background-image: url(./assets/promo_ipad_pro__c529dk533k4m_large.jpg);
+                background-size: cover;
+                background-position: center;
+                   
+                h1 
+                {
+                    font-family: light;
+                    color: #fff;
+                    font-weight: 900;      
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    text-align: center;
+                    color: #fff;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #000;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+            }
+            .AirpodPro3 
+            { 
+                height: 33rem;
+                grid-area: C; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 4rem 0rem;
+                background-image: url(./assets/promo_airpodspro_3__f6xmza7bglei_small.jpg);
+                background-size: cover;
+                background-position: center;
+                   
+                h1 
+                {
+                    font-family: light;
+                    font-weight: 900;      
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    text-align: center;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #fff;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+            }
+            .Watchse3  
+            { 
+                height: 33rem;
+                grid-area: D; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 3.5rem 0rem;
+                background-image: url(./assets/promo_apple_watch_se_3__fz5y29qx5mmy_large.jpg);
+                background-size: cover;
+                background-position: center;
+                
+
+                .h1heading
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    i 
+                    {
+                        font-size: 1.8rem;
+                    }
+                    
+                    h1 
+                    {
+                        font-family: bold;
+                    }
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #fff;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+            }
+            .MackbookAir 
+            { 
+                height: 33rem;
+                grid-area: E; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 4rem 0rem;
+                background-image: url(./assets/promo_macbook_air__fqowrtnxewqe_large.jpg);
+                background-size: cover;
+                background-position: center;
+                   
+                h1 
+                {
+                    font-family: light;
+                    font-weight: 900;      
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    text-align: center;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #fff;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+            }
+            .TradeIn   
+            { 
+                height: 33rem;
+                grid-area: F; 
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 3.5rem 0rem;
+                background-image: url(./assets/promo_iphone_tradein__bugw15ka691e_large.jpg);
+                background-size: cover;
+                background-position: center;
+                
+
+                .h1heading
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    i 
+                    {
+                        font-size: 2rem;
+                    }
+                    
+                    h1 
+                    {
+                        font-family: bold;
+                        font-size: 2.5rem;
+                    }
+                }
+
+                p 
+                {
+                    font-family: light;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    text-align: center;
+                }
+
+                .btns
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .btn1
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        background-color: #0077ed;
+                        color: white;
+                        border: none;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                    }
+                
+                    .btn2
+                    {
+                        padding: 0.5rem 1rem;
+                        font-size: 1rem;
+                        color: #0077ed;
+                        border: 1px solid #0077ed;
+                        border-radius: 5rem;
+                        background-color: #fff;
+                    }
+                
+                    .btn2:hover
+                    {
+                        background-color: #0077ed;
+                        cursor: pointer;
+                        color: white;
+                    
+                    }
+                }
+            }
+        }
     }
 }
