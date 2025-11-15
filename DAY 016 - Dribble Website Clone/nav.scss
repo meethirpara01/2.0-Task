@@ -1,0 +1,106 @@
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 38px;
+
+    .n1 {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        .menuicon {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            h4 {
+                a {
+                    text-decoration: none;
+                    color: var(--base-clor);
+                    font-size: 1rem;
+                    font-family: lightMona;
+                    font-weight: 450;
+
+                    i {
+                        font-size: 1rem;
+                        font-family: lightMona;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    .n2 {
+        display: flex;
+        align-items: center;
+
+        button {
+            font-size: 0.9rem;
+            font-family: lightMona;
+            font-weight: 700;
+            padding: 0.95rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .authSBTN {
+            background-color: #fff;
+        }
+
+        .authLBTN {
+            background-color: #0D0C22;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        .n1 {
+            gap: 1rem;
+
+            .menuicon {
+                display: flex;
+
+                h4 {
+                    i {
+                        font-size: 1.5rem;
+                        font-family: lightMona;
+                        font-weight: 800;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    nav {
+        padding: 10px 10px;
+
+        .n2 {
+            button {
+                font-size: 0.8rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .authSBTN {
+                display: none;
+            }
+        }
+    }
+}
