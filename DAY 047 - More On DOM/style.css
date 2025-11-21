@@ -1,3 +1,7 @@
+@font-face {
+  font-family: hell;
+  src: url(/Font/HelveticaNeue-Medium.otf);
+}
 * {
   margin: 0%;
   padding: 0%;
@@ -53,9 +57,11 @@ main .pionoKeyboard .pionoOneOctave #white-key {
   gap: 10px;
 }
 main .pionoKeyboard .pionoOneOctave #white-key .keyboardnote {
+  font-family: hell;
   color: rgb(113, 113, 122);
 }
 main .pionoKeyboard .pionoOneOctave #white-key .notename {
+  font-family: hell;
   color: rgb(63, 63, 70);
 }
 main .pionoKeyboard .pionoOneOctave #white-key:active,
@@ -82,6 +88,7 @@ main .pionoKeyboard .pionoOneOctave #black-key {
   justify-content: flex-end;
   align-items: center;
   padding: 12px;
+  font-family: hell;
   color: rgb(113, 113, 122);
 }
 main .pionoKeyboard .pionoOneOctave #black-key:active,

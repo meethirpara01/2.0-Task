@@ -1,3 +1,8 @@
+@font-face {
+    font-family: hell;
+    src: url(/Font/HelveticaNeue-Medium.otf );
+}
+
 * {
     margin: 0%;
     padding: 0%;
@@ -59,11 +64,12 @@ main {
                 gap: 10px;
 
                 .keyboardnote {
+                    font-family: hell;
                     color: rgb(113 113 122);
                 }
 
-                .notename
-                {
+                .notename {
+                    font-family: hell;
                     color: rgb(63 63 70);
                 }
             }
@@ -85,7 +91,7 @@ main {
             #black-key {
                 width: 10%;
                 height: 72%;
-                
+
                 // left: 6%;
                 background: linear-gradient(to bottom, #27272a 0%, #000000 100%);
                 /* zinc-800 to black */
@@ -102,6 +108,7 @@ main {
                 justify-content: flex-end;
                 align-items: center;
                 padding: 12px;
+                font-family: hell;
                 color: rgb(113 113 122);
             }
 
@@ -115,32 +122,31 @@ main {
                     1px 1px 3px rgba(0, 0, 0, 0.5);
             }
 
-            .C4b
-            {
+            .C4b {
                 position: absolute;
                 top: 0%;
                 left: 9%;
             }
-            .D4b
-            {
+
+            .D4b {
                 position: absolute;
                 top: 0%;
                 left: 24%;
             }
-            .F4b
-            {
+
+            .F4b {
                 position: absolute;
                 top: 0%;
                 left: 52%;
             }
-            .G4b
-            {
+
+            .G4b {
                 position: absolute;
                 top: 0%;
                 left: 66%;
             }
-            .A4b
-            {
+
+            .A4b {
                 position: absolute;
                 top: 0%;
                 left: 80%;
