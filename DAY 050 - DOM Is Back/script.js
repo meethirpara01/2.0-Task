@@ -112,8 +112,11 @@ const videos = [
 ];
 
 let sum = '';
+
 let reelcontainer = document.querySelector(".reelcontainer");
-videos.forEach((elem) => {
+function addData() {
+
+  videos.forEach((elem, indx) => {
 
     sum = sum + `<div class="reels">
                 <video autoplay muted loop src="${elem.video}"></video>
@@ -121,17 +124,17 @@ videos.forEach((elem) => {
                     <img src="${elem.profilePic}"
                         alt="" srcset="">
                     <h4 class="username">${elem.username}</h4>
-                    <button class="btn">${elem.isFollowed ? 'Unfollow' : 'Follow'}</button>
+                    <button id="${indx}" class="btn">${elem.isFollowed ? 'Unfollow' : 'Follow'}</button>
                 </div>
                 <div class="caption">
                     <h4>${elem.caption}</h4>
                 </div>
                 <div class="interectoptions">
-                    <div class="like">
+                    <div id="${indx}" class="like">
                         <h4>${elem.isLiked ? '<i class="likefilled ri-heart-fill"></i>' : '<i class="likeunfilled ri-heart-line"></i>'}</h4>
                         <h4>${elem.likeCount}</h4>
                     </div>
-                    <div class="comment">
+                    <div id="${indx}" class="comment">
                         <h4><i class="ri-chat-3-line"></i></h4>
                         <h4>${elem.commentCount}</h4>
                     </div>
@@ -144,5 +147,45 @@ videos.forEach((elem) => {
                     </div>
                 </div>
             </div>`
+  });
+  reelcontainer.innerHTML = sum;
+}
+
+addData();
+reelcontainer.addEventListener('click', (dets) => {
+
+  if (dets.target.className == "like") {
+    if (!videos[dets.target.id].isLiked) // (!videos[dets.target.id].isLiked == true)
+    {
+      videos[dets.target.id].likeCount++;
+      videos[dets.target.id].isLiked = true;
+    }
+    else {
+      videos[dets.target.id].likeCount--;
+      videos[dets.target.id].isLiked = false;
+    }
+    sum = '';
+    addData();
+  }
+
+  if (dets.target.className == "btn") {
+    if (!videos[dets.target.id].isFollowed) // (!videos[dets.target.id].isFollowed == true)
+    {
+      videos[dets.target.id].isFollowed = true;
+    }
+    else {
+      videos[dets.target.id].isFollowed = false;
+    }
+    sum = '';
+    addData();
+  }
+
+  if (dets.target.className == "comment") {
+
+    videos[dets.target.id].commentCount++;
+  
+    sum = '';
+    addData();
+  }
 });
-reelcontainer.innerHTML = sum;
+
