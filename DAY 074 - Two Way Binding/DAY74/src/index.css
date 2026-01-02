@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Gilroy;
+  src: url(./font/Gilroy-UltraLight.ttf);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Gilroy;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #213448;
+}
+html .Navbar,
+body .Navbar {
+  width: 100%;
+  height: 60px;
+  padding: 0px 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+html .Navbar .Nav,
+body .Navbar .Nav {
+  width: 100%;
+  height: 60px;
+  padding: 0px 20px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html .Navbar .Nav h3,
+body .Navbar .Nav h3 {
+  text-align: center;
+  color: #fff;
+}
+html .Navbar .Nav button,
+body .Navbar .Nav button {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #EAE0CF;
+  border: none;
+  outline: none;
+  color: #547792;
+  font-size: 20px;
+}
+html .Navbar .Nav button:hover,
+body .Navbar .Nav button:hover {
+  scale: 0.95;
+}
+html .Navbar .form,
+body .Navbar .form {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(34, 34, 34, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+html .Navbar .form input,
+body .Navbar .form input {
+  border: none;
+  outline: none;
+  padding: 12px 50px 12px 15px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+html .Navbar .form .subbtn,
+body .Navbar .form .subbtn {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #EAE0CF;
+  border: none;
+  outline: none;
+  color: #547792;
+  font-size: 20px;
+}
+html .Navbar .form .subbtn:hover,
+body .Navbar .form .subbtn:hover {
+  scale: 0.95;
+}
+html .Navbar .card,
+body .Navbar .card {
+  width: 270px;
+  height: 400px;
+  border-radius: 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+html .Navbar .card .glass,
+body .Navbar .card .glass {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  /* blur */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  /* 🔑 smooth mixer edge */
+  -webkit-mask-image: linear-gradient(to top, black 75%, transparent 100%);
+          mask-image: linear-gradient(to top, black 75%, transparent 100%);
+}
+html .Navbar .card .content,
+body .Navbar .card .content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 22px;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+html .Navbar .card .content .details,
+body .Navbar .card .content .details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 2px;
+}
+html .Navbar .card .content .details h3,
+body .Navbar .card .content .details h3 {
+  font-size: 20px;
+}
+html .Navbar .card .content .details h4,
+body .Navbar .card .content .details h4 {
+  font-size: 15px;
+}
+html .Navbar .card .content .elements button,
+body .Navbar .card .content .elements button {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 99px;
+  padding: 10px 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
