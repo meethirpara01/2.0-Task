@@ -1,7 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "./Card";
 
-const Nav = () => {
+const Nav = () => { 
+
+    // useEffect(() => {
+
+    //     const storedContacts = JSON.parse(localStorage.getItem("contacts"));
+    //     if (storedContacts) {
+    //         setcontacts(storedContacts);
+    //     }
+    // }, []);
+
+    const storedContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
+    const [contacts, setcontacts] = useState(storedContacts);
+
+    useEffect(() => {
+        localStorage.setItem("contacts", JSON.stringify(contacts));
+    }, [contacts]);
 
     const [showButton, setshowButton] = useState(true);
     const [showForm, setshowForm] = useState(false);
@@ -17,7 +33,6 @@ const Nav = () => {
     const [MoNumber, setMoNumber] = useState('');
     const [Email, setEmail] = useState('');
 
-    const [contacts, setcontacts] = useState([]);
 
     const handelSubmit = (e) => {
         e.preventDefault();
@@ -44,6 +59,11 @@ const Nav = () => {
         setimage("");
         setMoNumber("");
         setEmail("");
+
+        // localStorage.setItem("contacts", JSON.stringify(contacts));
+        // does NOT update contacts immediately
+        // contacts still contains the old value in the same function
+        // SO WE CAN'T DO THIS 
     }
 
     const handelFromClick = () => {
@@ -57,6 +77,10 @@ const Nav = () => {
         });
 
         setcontacts(removeidx);
+        // localStorage.setItem("contacts", JSON.stringify(contacts));
+        // does NOT update contacts immediately
+        // contacts still contains the old value in the same function
+        // SO WE CAN'T DO THIS 
     }
 
     return (
