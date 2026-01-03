@@ -38,6 +38,11 @@ const Nav = () => {
         setcontacts([...contacts, con]);
 
         // console.log(oldContact);
+
+        setName("");
+        setimage("");
+        setMoNumber("");
+        setEmail("");
     }
 
     const handelFromClick = () => {
@@ -51,7 +56,7 @@ const Nav = () => {
                 <h3>PHONE BOOK</h3>
                 {showButton && <button onClick={handelButton}>New Contact</button>}
             </div>
-            {showForm && <form onSubmit={(e) => { handelSubmit(e) }}  onClick={(e) => { if (e.target === e.currentTarget) { handelFromClick()}}} className="form">
+            {showForm && <form onSubmit={(e) => { handelSubmit(e) }} onClick={(e) => { if (e.target === e.currentTarget) { handelFromClick() } }} className="form">
                 <input required type="text" value={Name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter Name" />
                 <input required type="text" value={image} onChange={(e) => { setimage(e.target.value) }} placeholder="Profile Pic" />
                 <input required type="number" value={MoNumber} onChange={(e) => { setMoNumber(e.target.value) }} placeholder="Enter Contact Number" />
