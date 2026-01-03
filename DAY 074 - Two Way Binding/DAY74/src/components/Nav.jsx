@@ -25,6 +25,7 @@ const Nav = () => {
         setshowForm(false);
 
         const con = {
+            id: crypto.randomUUID(),
             name: Name,
             image: image,
             mobailNumber: MoNumber,
@@ -50,6 +51,14 @@ const Nav = () => {
         setshowForm(false);
     }
 
+    const handelRemoveContact = (id) => {
+        const removeidx = contacts.filter((elem) => {
+            return elem.id !== id;
+        });
+
+        setcontacts(removeidx);
+    }
+
     return (
         <div className="Navbar">
             <div className="Nav">
@@ -65,7 +74,7 @@ const Nav = () => {
             </form>}
 
             {showButton && contacts.map((elem, idx) => {
-                return (<Card key={idx} contact={elem} />)
+                return (<Card key={idx} idx={idx} contact={elem} onDelete={handelRemoveContact} />)
             })}
         </div>
     )

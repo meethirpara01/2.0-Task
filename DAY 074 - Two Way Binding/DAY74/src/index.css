@@ -96,8 +96,8 @@ body .Navbar .form .subbtn:hover {
 }
 html .Navbar .card,
 body .Navbar .card {
-  width: 270px;
-  height: 400px;
+  width: 280px;
+  height: 440px;
   border-radius: 32px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +110,7 @@ body .Navbar .card .glass {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 45%;
+  height: 50%;
   /* blur */
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -148,6 +148,12 @@ html .Navbar .card .content .details h4,
 body .Navbar .card .content .details h4 {
   font-size: 15px;
 }
+html .Navbar .card .content .elements,
+body .Navbar .card .content .elements {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 html .Navbar .card .content .elements button,
 body .Navbar .card .content .elements button {
   background: white;
@@ -156,4 +162,14 @@ body .Navbar .card .content .elements button {
   border-radius: 99px;
   padding: 10px 20px;
   cursor: pointer;
+  text-align: left;
+}
+html .Navbar .card .content .elements .btnRemoveContact:hover,
+body .Navbar .card .content .elements .btnRemoveContact:hover {
+  background: black;
+  color: white;
+}
+html .Navbar .card .content .elements .btnRemoveContact:active,
+body .Navbar .card .content .elements .btnRemoveContact:active {
+  scale: 0.95;
 }/*# sourceMappingURL=index.css.map */

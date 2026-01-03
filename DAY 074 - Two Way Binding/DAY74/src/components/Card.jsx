@@ -1,6 +1,10 @@
 const Card = (props) => {
 
+    const idx = props.idx;
     const contact = props.contact;
+    const handelRemoveContact = props.onDelete;
+
+    
     return (
         <div>
             <div className="card" style={{ backgroundImage: `url(${contact.image})` }}>
@@ -13,6 +17,7 @@ const Card = (props) => {
                     </div>
                     <div className="elements">
                         <button><i className="ri-add-line"></i> Add Member</button>
+                        <button onClick={() => { handelRemoveContact(contact.id) }} className="btnRemoveContact"><i className="ri-close-line"></i> Remove Contact</button>
                     </div>
                 </div>
 
