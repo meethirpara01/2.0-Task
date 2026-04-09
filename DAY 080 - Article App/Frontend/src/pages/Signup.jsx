@@ -22,7 +22,7 @@ const Signup = () => {
         const file = progilePicInputFeildRef.current.files[0];
 
         await handleRegister(name, username, email, file, password)
-        navigate("/login")
+        navigate("/signin")
     }
 
     return (
