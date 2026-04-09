@@ -1,10 +1,28 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./signup.scss"
+import { useRef } from "react";
+import { useState } from "react";
+import { useAuth } from "../hooks/useAuth";
 
 const Signup = () => {
 
-    const handleFromSubmit = (e) => {
+    const { user, loading, handleRegister } = useAuth()
+
+    const [name, setName] = useState("")
+    const [username, setUsername] = useState("")
+    const progilePicInputFeildRef = useRef(null)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const navigate = useNavigate();
+
+    const handleFromSubmit = async (e) => {
         e.preventDefault();
+
+        const file = progilePicInputFeildRef.current.files[0];
+
+        await handleRegister(name, username, email, file, password)
+        navigate("/login")
     }
 
     return (
@@ -31,23 +49,23 @@ const Signup = () => {
                     <form onSubmit={handleFromSubmit} className="Form">
                         <div className="fromInput">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" placeholder="Enet your name" />
+                            <input onInput={(e) => { setName(e.target.value) }} value={name} type="text" id="name" placeholder="Enet your name" />
                         </div>
                         <div className="fromInput">
                             <label htmlFor="username">Username</label>
-                            <input type="text" id="username" placeholder="Enet username" />
+                            <input onInput={(e) => { setUsername(e.target.value) }} value={username} type="text" id="username" placeholder="Enet username" />
                         </div>
                         <div className="fromInput">
                             <label htmlFor="email">Email</label>
-                            <input type="text" id="email" placeholder="Enet your email" />
+                            <input onInput={(e) => { setEmail(e.target.value) }} value={email} type="text" id="email" placeholder="Enet your email" />
                         </div>
                         <div className="File">
                             <label htmlFor="file">Profile Pic</label>
-                            <input type="file" id="file"/>
+                            <input ref={progilePicInputFeildRef} type="file" id="file" />
                         </div>
                         <div className="fromInput">
                             <label htmlFor="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter password" />
+                            <input onInput={(e) => { setPassword(e.target.value) }} value={password} type="password" id="password" placeholder="Enter password" />
                         </div>
                         <button type='submit' className="signupBtn">Sign Up</button>
                     </form>

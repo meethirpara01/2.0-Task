@@ -1,10 +1,33 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./signin.scss"
+import { useState } from "react";
+import { useAuth } from "../hooks/useAuth.js";
+import { useEffect } from "react";
 
 const Signin = () => {
 
-    const handleFromSubmit = (e) => {
+    const { user, loading, handleLogin } = useAuth()
+
+    useEffect(() => {
+        console.log("USER: ", user);
+    }, [user])
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const navigate = useNavigate();
+
+    const handleFromSubmit = async (e) => {
         e.preventDefault();
+
+        // console.log(email);
+        // console.log(password);
+
+        await handleLogin(email, password)
+
+        setEmail("")
+        setPassword("")
+        navigate("/")
     }
 
     return (
@@ -31,11 +54,11 @@ const Signin = () => {
                     <form onSubmit={handleFromSubmit} className="Form">
                         <div className="fromInput">
                             <label htmlFor="email">Email</label>
-                            <input type="text" id="email" placeholder="Enet your email" />
+                            <input type="text" onInput={(e) => { setEmail(e.target.value) }} value={email} id="email" placeholder="Enet your email" />
                         </div>
                         <div className="fromInput">
                             <label htmlFor="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter password" />
+                            <input type="password" onInput={(e) => { setPassword(e.target.value) }} value={password} id="password" placeholder="Enter password" />
                         </div>
                         <button type='submit' className="signupBtn">Sign Up</button>
                     </form>
