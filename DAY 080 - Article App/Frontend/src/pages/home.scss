@@ -1,0 +1,40 @@
+.homepage {
+    width: 100%;
+
+    .section1 {
+        background-color: #EEE3CB;
+        position: relative;
+
+        h1 {
+            width: 100%;
+            position: relative;
+            z-index: 9;
+            font-family: GilroyUL;
+            color: #594545;
+            font-size: 12vw;
+            margin-top: 12vw;
+            margin-left: 10vw;
+        }
+        
+        h2 {
+            width: 100%;
+            position: relative;
+            z-index: 9;
+            font-family: GilroyUL;
+            color: #594545;
+            font-size: 12vw;
+            margin-left: 30vw;
+            line-height: 0.8;
+        }
+    }
+
+    .section1::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("../assets/008.png");
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 1;
+    }
+}

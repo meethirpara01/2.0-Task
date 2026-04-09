@@ -1,3 +1,23 @@
+@font-face {
+    font-family: GilroyR;
+    src: url("../public/font/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: GilroyM;
+    src: url("../public/font/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: GilroyUL;
+    src: url("../public/font/Gilroy-UltraLight.ttf");
+}
+
+@font-face {
+    font-family: GilroyT;
+    src: url("../public/font/Gilroy-Thin.ttf");
+}
+
 * {
     margin: 0%;
     padding: 0%;
@@ -9,22 +29,18 @@ html,
 body {
     width: 100%;
     min-height: 100vh;
-    background: radial-gradient(circle at 50% 50%, #6b5a7a, #2b2433 100%);
+    background-color: #EEE3CB;
+    // background-color: #EEE3CB;
+    // position: relative;
+    padding-top: 10px;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("./assets/noisy-background.jpg");
-    opacity: 0.15;
-    pointer-events: none;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.5));
-    pointer-events: none;
-}
+// body::before {
+//     content: "";
+//     position: fixed;
+//     inset: 0;
+//     background-image: url("./assets/008.png");
+//     opacity: 0.4;
+//     pointer-events: none;
+//     z-index: 1;
+// }
