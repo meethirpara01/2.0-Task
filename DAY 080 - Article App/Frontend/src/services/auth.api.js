@@ -27,3 +27,8 @@ export async function register(name, username, email, file, password) {
     const response = await api.post("/register", formData);
     return response.data
 }
+
+export async function getMe() {
+    const response = await api.get("/get-me");
+    return response.data
+}
