@@ -13,8 +13,8 @@ const Navbar = () => {
                     <h4><NavLink className={"NavLink"} to={"/"}>Profile</NavLink></h4>
                 </div>
                 <div className="btns">
-                    <button className="sighup">SighUp</button>
-                    <button className="sighin">SignIn</button>
+                    <button className="sighup"><NavLink className={"NavLink"} to={"/signup"}>SighUp</NavLink></button>
+                    <button className="sighin"><NavLink className={"NavLink"} to={"/signin"}>SighIn</NavLink></button>
                 </div>
             </div>
         </div>

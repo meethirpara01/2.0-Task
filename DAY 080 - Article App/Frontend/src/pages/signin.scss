@@ -1,0 +1,182 @@
+.signinPage {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    // background-image: url("https://images.unsplash.com/photo-1674707488760-4ec87e969368?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .conteiner {
+        width: 65%;
+        height: 70vh;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #F5EEE0;
+        background-color: #594545;
+        display: flex;
+        gap: 10px;
+
+        .left {
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            // background: url("../assets/photo-1620987278429-ab178d6eb547.avif");
+            background: url("https://images.unsplash.com/photo-1680425664114-03841a2abc93?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .top {
+                width: 100%;
+                padding-top: 10px;
+                padding-left: 10px;
+                display: flex;
+                gap: 10px;
+
+                h2 {
+                    font-family: GilroyR;
+                    color: #594545;
+                    font-size: 0.9vw;
+                }
+
+                .line {
+                    width: 15%;
+                    height: 1px;
+                    background-color: #594545;
+                    margin-top: 7px;
+                }
+            }
+
+            .bottom {
+                width: 100%;
+                padding-left: 10px;
+
+                h2 {
+                    font-family: GilroyR;
+                    color: #fff;
+                    font-size: 4vw;
+                    line-height: 0.9;
+                }
+
+                p {
+                    font-family: GilroyR;
+                    color: #fff;
+                    font-size: 0.9vw;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            // background-color: #fff5ff;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .textContent {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h4 {
+                    color: #fff;
+                    font-family: GilroyUL;
+                    font-size: 3vw;
+                    line-height: 1;
+                }
+
+                p {
+                    color: #fff;
+                    font-family: GilroyUL;
+                    font-size: 0.8vw;
+
+                }
+            }
+
+            .Form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+
+                .fromInput {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+
+                    label {
+                        color: #fff;
+                        font-family: GilroyUL;
+                        cursor: pointer;
+                    }
+
+                    input {
+                        padding: 10px 100px 10px 10px;
+                        border: 1px solid #fff;
+                        border-radius: 10px;
+                        color: #fff;
+                    }
+                }
+
+                .File {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+
+                    label {
+                        color: #fff;
+                        font-family: GilroyUL;
+                        cursor: pointer;
+                    }
+
+                    input {
+                        padding: 10px 0px 10px 10px;
+                        border: 1px solid #fff;
+                        border-radius: 10px;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+
+                .signupBtn {
+                    padding: 10px 100px;
+                    background-color: #fff;
+                    color: #111;
+                    border: none;
+                    border-radius: 10px;
+                    font-family: GilroyUL;
+                    cursor: pointer;
+                }
+
+                .signupBtn:active {
+                    scale: 0.99;
+                }
+            }
+
+            p {
+                color: #fff;
+                font-family: GilroyUL;
+                font-size: 16px;
+
+                .toggleAuthForm {
+                    color: #fff;
+                    font-family: GilroyR;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
