@@ -4,8 +4,6 @@ import articleModel from "../models/article.model.js";
 import ImageKit from '@imagekit/nodejs';
 import { toFile } from "@imagekit/nodejs";
 
-console.log(process.env.IMAGEKIT_PRIVATE_KEY);
-
 const imageKit = new ImageKit({
     privateKey: process.env.IMAGEKIT_PRIVATE_KEY
 })
@@ -14,14 +12,14 @@ export async function createArticle(req, res) {
 
     const userId = req.user.id;
 
-    // console.log(req.body, req.file);
+    console.log(req.body, req.file);
     
     const { title, tag, description } = req.body;
 
     const file = await imageKit.files.upload({
         file: await toFile(Buffer.from(req.file.buffer), 'file'),
         fileName: "TEST",
-        folder: "ArticleAPP"
+        folder: "ArticleAPP/ArticleImages"
     })
 
     const article = await articleModel.create({

@@ -1,9 +1,23 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import userModel from "../models/user.model.js";
 import jwt from "jsonwebtoken"
+import ImageKit from '@imagekit/nodejs';
+import { toFile } from "@imagekit/nodejs";
+
+const imageKit = new ImageKit({
+    privateKey: process.env.IMAGEKIT_PRIVATE_KEY
+})
 
 export async function register(req, res) {
 
-    const { username, name, email, imageUrl, password } = req.body;
+    const { username, name, email, password } = req.body;
+
+    const file = await imageKit.files.upload({
+        file: await toFile(Buffer.from(req.file.buffer), 'file'),
+        fileName: "TEST",
+        folder: "ArticleAPP/ProfilePic"
+    })
 
     const isUserAlreadyExist = await userModel.findOne({
         $or: [
@@ -21,10 +35,10 @@ export async function register(req, res) {
     }
 
     const user = await userModel.create({
-        username, 
-        name, 
-        email, 
-        imageUrl, 
+        username,
+        name,
+        email,
+        imageUrl: file.url,
         password
     })
 
@@ -48,13 +62,13 @@ export async function register(req, res) {
 }
 
 
-export async function login (req, res) {
+export async function login(req, res) {
 
     const { email, password } = req.body;
 
     const user = await userModel.findOne({ email })
 
-    if(!user) {
+    if (!user) {
         return res.status(404).json({
             message: "User Not Found",
             success: false,
@@ -64,7 +78,7 @@ export async function login (req, res) {
 
     const isPasswordValid = await user.comparePassword(password);
 
-    if(!isPasswordValid) {
+    if (!isPasswordValid) {
         return res.status(404).json({
             message: 'Invalid email or password',
             success: false,
@@ -91,13 +105,13 @@ export async function login (req, res) {
     })
 }
 
-export async function getMe (req, res) {
+export async function getMe(req, res) {
 
     const id = req.user.id;
 
     const user = await userModel.findById(id)
 
-    if(!user) {
+    if (!user) {
         return res.status(404).json({
             message: "User Not Found",
             success: false,
