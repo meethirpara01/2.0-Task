@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom"
 import "./navbar.scss"
+import { useAuth } from "../hooks/useAuth"
 
 const Navbar = () => {
+
+    const { user } = useAuth();
+    
     return (
         <div className='navbar'>
             <div className="navContent">
@@ -13,8 +17,8 @@ const Navbar = () => {
                     <h4><NavLink className={"NavLink"} to={"/"}>Profile</NavLink></h4>
                 </div>
                 <div className="btns">
-                    <button className="sighup"><NavLink className={"NavLink"} to={"/signup"}>SighUp</NavLink></button>
-                    <button className="sighin"><NavLink className={"NavLink"} to={"/signin"}>SighIn</NavLink></button>
+                    {user ? <button className="logout">Logout</button>
+                    : <button className="sighin"><NavLink className={"NavLink"} to={"/signin"}>SighIn</NavLink></button>}
                 </div>
             </div>
         </div>

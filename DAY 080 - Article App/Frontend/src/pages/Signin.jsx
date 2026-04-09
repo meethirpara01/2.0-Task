@@ -60,7 +60,7 @@ const Signin = () => {
                             <label htmlFor="password">Password</label>
                             <input type="password" onInput={(e) => { setPassword(e.target.value) }} value={password} id="password" placeholder="Enter password" />
                         </div>
-                        <button type='submit' className="signupBtn">Sign Up</button>
+                        <button type='submit' className="signupBtn">{loading ? "Logging in..." : "Sign In"}</button>
                     </form>
                     <p>Don't have an account? <Link className="toggleAuthForm" to={"/signup"}>Signup</Link></p>
                 </div>

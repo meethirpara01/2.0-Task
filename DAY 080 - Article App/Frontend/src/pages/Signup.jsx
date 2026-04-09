@@ -67,7 +67,7 @@ const Signup = () => {
                             <label htmlFor="password">Password</label>
                             <input onInput={(e) => { setPassword(e.target.value) }} value={password} type="password" id="password" placeholder="Enter password" />
                         </div>
-                        <button type='submit' className="signupBtn">Sign Up</button>
+                        <button type='submit' className="signupBtn">{loading ? "Registering..." : "Sign up"}</button>
                     </form>
                     <p>Already have an account? <Link className="toggleAuthForm" to={"/signin"}>Signin</Link></p>
                 </div>
