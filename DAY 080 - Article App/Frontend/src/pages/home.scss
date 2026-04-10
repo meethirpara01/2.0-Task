@@ -3,7 +3,8 @@
 
     .section1 {
         width: 100%;
-        min-height: 100vh;
+        // min-height: ;
+        padding-bottom: 14vw;
         background-color: #EEE3CB;
         position: relative;
 
@@ -14,10 +15,10 @@
             font-family: GilroyUL;
             color: #594545;
             font-size: 12vw;
-            margin-top: 12vw;
+            margin-top: 24vh;
             margin-left: 10vw;
         }
-        
+
         h2 {
             width: 100%;
             position: relative;
@@ -27,6 +28,22 @@
             font-size: 12vw;
             margin-left: 30vw;
             line-height: 0.8;
+        }
+
+        .paracontent {
+            position: absolute;
+            bottom: 10%;
+            right: 4%;
+            text-align: right;
+
+            p {
+                width: 100%;
+                z-index: 9;
+                font-family: GilroyUL;
+                color: #594545;
+                font-size: 1.9vw;
+                line-height: 1;
+            }
         }
     }
 

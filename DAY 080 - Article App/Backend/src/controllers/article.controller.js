@@ -35,3 +35,17 @@ export async function createArticle(req, res) {
         article
     })
 }
+
+export async function uploadImage(req, res) {
+
+    const file = await imageKit.files.upload({
+        file: await toFile(Buffer.from(req.file.buffer), 'file'),
+        fileName: "TEST",
+        folder: "ArticleAPP/ArticleImages"
+    })
+
+    return res.status(201).json({
+        message: "Image Upload Successfully",
+        url: file.url
+    })
+}

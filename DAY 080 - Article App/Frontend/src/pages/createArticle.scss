@@ -1,0 +1,105 @@
+.createArticlePage {
+    width: 100%;
+    min-height: 100vh;
+    background-color: antiquewhite;
+    background-color: rgb(253, 227, 195);
+    padding-top: 200px;
+    padding-left: 70px;
+
+    h1 {
+        color: black;
+        font-family: GilroyUL;
+        font-size: 2vw;
+        margin-bottom: 30px;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+
+        .left {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid black;
+                font-family: GilroyUL;
+                font-size: 2vw;
+                text-align: right;
+                margin-bottom: 50px;
+                color: black;
+            }
+
+            .FileInput {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                button {
+                    background-color: #fff;
+                    border: none;
+                    padding: 8px 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    font-family: GilroyR;
+                    color: #594545;
+                    font-size: 16px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+                    align-self: right;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    color: black;
+                    font-family: GilroyR;
+                }
+            }
+
+            button {
+                background-color: #fff;
+                border: none;
+                padding: 8px 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-family: GilroyR;
+                color: #594545;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                align-self: right;
+                margin-top: 30px;
+            }
+            
+            button:active {
+                scale: 0.99;
+            }
+        }
+
+        .right {
+            width: 60%;
+
+            h4 {
+                color: black;
+                font-family: GilroyUL;
+                font-size: 1.5vw;
+            }
+
+            #editorjs {
+                min-height: 600px;
+                background: #fff;
+                color: #000;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: text;
+            }
+        }
+    }
+}
