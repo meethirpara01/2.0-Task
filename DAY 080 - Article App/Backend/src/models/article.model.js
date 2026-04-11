@@ -1,5 +1,13 @@
 import mongoose from 'mongoose';
 
+const contentSchema = new mongoose.Schema({
+    type: String,
+    text: String,
+    url: String,
+    items: [String],
+    style: String
+}, { _id: false });
+
 const articleSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -17,15 +25,7 @@ const articleSchema = new mongoose.Schema({
     coverImage: {
         type: String,
     },
-    content: [
-        {
-            type: String,
-            text: String,
-            url: String,
-            items: [String],
-            style: String
-        }
-    ],
+    content: [contentSchema],
 }, {
     timestamps: true
 })
