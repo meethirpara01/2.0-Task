@@ -8,6 +8,8 @@ import { useArticle } from '../hooks/useArticle.js';
 
 const CreateArticle = () => {
 
+    const { articles, handleUploadImage, handleCreateArticle } = useArticle();
+
     const fileInputRef = useRef();
     const [fileNmae, setFileNmae] = useState("No file chosen");
 
@@ -24,7 +26,6 @@ const CreateArticle = () => {
         }
     }
 
-    const { handleUploadImage } = useArticle();
     const uploadByFile = async (file) => {
         const url = await handleUploadImage(file);
         console.log("URL:", url);
@@ -70,30 +71,77 @@ const CreateArticle = () => {
         if (!editorRef.current) {
             initEditor()
         }
+
+        return () => {
+            if (editorRef.current) {
+                editorRef.current.destroy();
+                editorRef.current = null;
+            }
+        }
     }, [])
 
     const [title, settitle] = useState("");
     const [tag, setTag] = useState("");
 
+
+
     const handleSubmitArticle = async (e) => {
         e.preventDefault();
 
         const { blocks } = await editorRef.current.save();
+        // console.log(blocks);
+
+        const content = blocks.map((block) => {
+            if (block.type === "paragraph" || block.type === "header") {
+                return {
+                    type: block.type,
+                    text: block.data.text
+                };
+            }
+
+            if (block.type === "list") {
+                return {
+                    type: "list",
+                    items: block.data.items,
+                    style: block.data.style
+                };
+            }
+
+            if (block.type === "image") {
+                return {
+                    type: "image",
+                    url: block.data.file.url
+                };
+            }
+
+            return null;
+        }).filter(Boolean);
+
+        if (!content || content.length === 0) {
+            alert("Please write something in article");
+            return;
+        }
+
+        const coverImage = fileInputRef.current.files[0];
+        console.log("Article: ", title, tag, coverImage, content);
+
+        await handleCreateArticle(title, tag, coverImage, content);
+        console.log(articles);
     }
 
     return (
         <div className='createArticlePage'>
             <h1>Create Here</h1>
-            <form>
+            <form onSubmit={handleSubmitArticle}>
                 <div className="left">
-                    <input type="text" onChange={(e) => {settitle(e.target.value)}} value={title} placeholder='Title' />
-                    <input type="text" onChange={(e) => {setTag(e.target.value)}} value={tag} placeholder='Add Tag' />
+                    <input type="text" onChange={(e) => { settitle(e.target.value) }} value={title} placeholder='Title' />
+                    <input type="text" onChange={(e) => { setTag(e.target.value) }} value={tag} placeholder='Add Tag' />
                     <div className='FileInput'>
                         <button type="button" onClick={handleClick}>Choose Cover Image</button>
                         <input type="file" ref={fileInputRef} onChange={handleChange} accept="image/*" style={{ display: "none" }} />
                         <p>{fileNmae}</p>
                     </div>
-                    <button type="submit" onClick={handleSubmitArticle}>Create Article</button>
+                    <button type="submit">Create Article</button>
                 </div>
                 <div className="right">
                     <h4>Content</h4>

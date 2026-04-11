@@ -13,21 +13,33 @@ export async function createArticle(req, res) {
     const userId = req.user.id;
 
     console.log(req.body, req.file);
-    
-    const { title, tag, description } = req.body;
 
-    const file = await imageKit.files.upload({
-        file: await toFile(Buffer.from(req.file.buffer), 'file'),
-        fileName: "TEST",
-        folder: "ArticleAPP/ArticleImages"
-    })
+    const { title, tag, content } = req.body;
+
+    let imageUrl = "";
+
+    if (req.file) {
+        const file = await imageKit.files.upload({
+            file: await toFile(Buffer.from(req.file.buffer), 'file'),
+            fileName: "TEST",
+            folder: "ArticleAPP/ArticleImages"
+        });
+
+        imageUrl = file.url;
+    }
+
+    let parsedContent = [];
+
+    if (content && content !== "undefined") {
+        parsedContent = JSON.parse(content);
+    }
 
     const article = await articleModel.create({
         userId: userId,
-        title, 
+        title,
         tag,
-        imageUrl: file.url, 
-        description
+        coverImage: imageUrl,
+        content: parsedContent
     })
 
     return res.status(201).json({

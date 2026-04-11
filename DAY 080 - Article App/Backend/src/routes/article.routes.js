@@ -6,7 +6,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 const articleRoute = Router();
 
-articleRoute.post("/create", upload.single("image"), authUser, createArticle);
+articleRoute.post("/create", upload.single("coverImage"), authUser, createArticle);
 
 articleRoute.post("/upload-image", upload.single("image"), authUser, uploadImage);
 

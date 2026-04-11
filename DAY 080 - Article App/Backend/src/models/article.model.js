@@ -14,13 +14,18 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: [true, "Tag is required"]
     },
-    imageUrl: {
+    coverImage: {
         type: String,
     },
-    description: {
-        type: String,
-        required: [true, "Description is required"]
-    }
+    content: [
+        {
+            type: String,
+            text: String,
+            url: String,
+            items: [String],
+            style: String
+        }
+    ],
 }, {
     timestamps: true
 })
