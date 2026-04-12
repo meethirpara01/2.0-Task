@@ -102,7 +102,7 @@ const CreateArticle = () => {
             if (block.type === "list") {
                 return {
                     type: "list",
-                    items: block.data.items,
+                    items: block.data.items.map(item => item.content),
                     style: block.data.style
                 };
             }
